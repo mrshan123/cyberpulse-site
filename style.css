@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fb; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth color transitions */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #00bcd4, #3e4b5b); /* Gradient color */
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background: linear-gradient(135deg, #3e4b5b, #00bcd4); /* Reverse gradient on hover */
+}
+
+.navbar .logo {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effects for Navbar Links */
+.nav-links a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2); /* White background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('main22.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #2980b9;
+    transform: scale(1.05); /* Slightly enlarge */
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPulse Program-01</title>
+    <meta name="description" content="CyberPulse provides high-quality tech education. Empower your career today!">
+    <meta name="keywords" content="technology, courses, education, tech training, future technology">
+    <meta property="og:title" content="CyberPulse Program-01">
+    <meta property="og:description" content="CyberPulse provides high-quality tech education to empower the next generation of innovators.">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar" aria-label="primary-navigation">
+            <div class="logo" aria-label="CyberPulse Logo">CyberPulse</div>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="#new" aria-label="Featured Courses">New</a></li>
+                <li><a href="#learn" aria-label="Learn">Learn</a></li>
+                <li><a href="about.html" aria-label="About Us">About</a></li>
+                <li><a href="#contact" aria-label="Contact Us">Contact</a></li>
+                <li><a href="#signup" aria-label="Sign Up">Sign Up</a></li>
+                <li><a href="#login" aria-label="Login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Empowering the Future of Technology</h1>
+        <p>Join CyberPulse to enhance your skills and achieve your career goals in the tech industry.</p>
+        <a href="#learn" class="cta-button" aria-label="Start Learning Now" onclick="openLearnPage()">Start Learning Now</a>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section id="new" class="featured-courses">
+        <h2>Featured Courses</h2>
+        <div class="course-grid">
+            <div class="course-card" aria-labelledby="computerTech">
+                <h3 id="computerTech">Computer Technology</h3>
+                <p>Gain in-depth knowledge about the latest hardware, software, and technologies that drive modern computing systems.</p>
+                <a href="#computerTechPage" class="btn" onclick="openCourseDetails('computerTech')" aria-label="Explore Computer Technology Course">Explore Course</a>
+            </div>
+            <div class="course-card" aria-labelledby="webDev">
+                <h3 id="webDev">Web Development</h3>
+                <p>Learn how to build dynamic and interactive websites using HTML, CSS, JavaScript, and modern web frameworks.</p>
+                <a href="#webDevPage" class="btn" onclick="openCourseDetails('webDev')" aria-label="Explore Web Development Course">Explore Course</a>
+            </div>
+            <div class="course-card" aria-labelledby="networking">
+                <h3 id="networking">Networking</h3>
+                <p>Master the fundamentals of computer networks, protocols, and security practices to build and manage networks effectively.</p>
+                <a href="#networkingPage" class="btn" onclick="openCourseDetails('networking')" aria-label="Explore Networking Course">Explore Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Pages -->
+    <section id="computerTechPage" class="course-details">
+        <h2>Computer Technology Course</h2>
+        <p>In this comprehensive Computer Technology Course, you will dive deep into the foundational and cutting-edge knowledge that shapes the world of modern computing. Whether you're a beginner or someone with some prior knowledge, this course will guide you step-by-step through both fundamental concepts and the most advanced technologies used today.From the hardware that powers computing systems to the software that drives them, you'll explore the intricate details of how computers function, how data flows within systems, and how networks interconnect globally. By the end of the course, you will be equipped with the knowledge to build, maintain, and troubleshoot computer systems, as well as to understand the newest trends in software development, cybersecurity, and networking technologies.</p>
+        <a href="#signup" class="btn" aria-label="Sign Up Now">Sign Up Now</a>
+    </section>
+
+    <section id="webDevPage" class="course-details">
+        <h2>Web Development Course</h2>
+        <p>This Web Development course is designed to take you from the basics to the advanced skills needed to build modern, dynamic, and interactive websites. Whether you're starting from scratch or have some background in web development, this course will guide you through every step of the process, ensuring that you understand not just how to build websites, but also how to make them effective, responsive, and user-friendly.</p>
+        <a href="#signup" class="btn" aria-label="Sign Up Now">Sign Up Now</a>
+    </section>
+
+    <section id="networkingPage" class="course-details">
+        <h2>Networking Course</h2>
+        <p>This comprehensive Networking course provides the foundational and advanced skills required to understand, manage, and troubleshoot computer networks. Whether you're new to networking or looking to refine your knowledge, this course will equip you with the necessary expertise to build and maintain efficient, secure, and reliable networks.</p>
+        <a href="#signup" class="btn" aria-label="Sign Up Now">Sign Up Now</a>
+    </section>
+
+    <!-- User Interaction (Sign Up/Login) -->
+    <section id="signup" class="signup">
+        <h2>Create Your Account</h2>
+        <form action="/submit-signup" method="post" class="signup-form">
+            <div class="form-group">
+                <input type="text" placeholder="Full Name" name="name" required aria-label="Enter your full name">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email Address" name="email" required aria-label="Enter your email address">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" name="password" required aria-label="Enter your password">
+            </div>
+            <div class="form-group">
+                <button type="submit" aria-label="Sign Up">Sign Up</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="login" class="login">
+        <h2>Login to Your Account</h2>
+        <form action="/submit-login" method="post" class="login-form">
+            <div class="form-group">
+                <input type="email" placeholder="Email Address" name="email" required aria-label="Enter your email address">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" name="password" required aria-label="Enter your password">
+            </div>
+            <div class="form-group">
+                <button type="submit" aria-label="Login">Login</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About CyberPulse</h2>
+        <p>CyberPulse is dedicated to providing high-quality education in technology to empower the next generation of innovators.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p class="section-subtitle">We're here to help and answer any questions you might have. Reach out to us!</p>
+        <form class="contact-form" method="post" action="/submit-contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" name="name" required aria-label="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" name="email" required aria-label="Enter your email">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" name="message" required aria-label="Enter your message"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" aria-label="Submit Message">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>DESIGN    BY    SHAN</h2>
+            </div>
+            <div class="footer-socials">
+                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Visit our Facebook page">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://viber.com" target="_blank" class="social-icon" aria-label="Visit our Viber page">
+                    <i class="fab fa-viber"></i>
+                </a>
+                <a href="sms:+11234567890" class="social-icon" aria-label="Send us a message via SMS">
+                    <i class="fas fa-sms"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberPulse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality for course details
+        function openCourseDetails(course) {
+            let title, description;
+            if (course === 'computerTech') {
+                title = "Computer Technology";
+                description = "Gain in-depth knowledge about the latest hardware, software, and technologies that drive modern computing systems.";
+            } else if (course === 'webDev') {
+                title = "Web Development";
+                description = "Learn how to build dynamic and interactive websites using HTML, CSS, JavaScript, and modern web frameworks.";
+            } else if (course === 'networking') {
+                title = "Networking";
+                description = "Master the fundamentals of computer networks, protocols, and security practices to build and manage networks effectively.";
+            }
+
+            document.getElementById("courseTitle").innerText = title;
+            document.getElementById("courseDescription").innerText = description;
+            document.getElementById("courseModal").style.display = "block";
+            document.getElementById("courseModal").setAttribute("aria-hidden", "false");
+        }
+
+        function closeModal() {
+            document.getElementById("courseModal").style.display = "none";
+            document.getElementById("courseModal").setAttribute("aria-hidden", "true");
+        }
+
+        // Adding "Start Learning Now" button functionality to go to the Learn section
+        function openLearnPage() {
+            window.location.href = "#learn";  // Scroll to Learn section
+        }
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyB-Hlhn9wolSy-q9GxVNLyHJP_mvxb_rLk",
+          authDomain: "cyberpules-899b9.firebaseapp.com",
+          projectId: "cyberpules-899b9",
+          storageBucket: "cyberpules-899b9.firebasestorage.app",
+          messagingSenderId: "990536668078",
+          appId: "1:990536668078:web:b585f650b206616555ee3f",
+          measurementId: "G-WYQYX2XN2E"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
